@@ -4,8 +4,8 @@ function compareTrue(x, y) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(x, y) {
+  return (x * y) / 2;
 }
 
 // Desafio 3
