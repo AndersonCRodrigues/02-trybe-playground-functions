@@ -46,8 +46,19 @@ function catAndMouse(rato, gato1, gato2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function identifica(n) {
+  if ((n % 3 === 0) && (n % 5 === 0)) return 'fizzBuzz';
+  if (n % 3 === 0) return 'fizz';
+  if (n % 5 === 0) return 'buzz';
+  return 'bug!';
+}
+
+function fizzBuzz(vetor) {
+  let frase = [];
+  for (let i = 0; i < vetor.length; i += 1) {
+    frase.push(identifica(vetor[i]));
+  }
+  return frase;
 }
 
 // Desafio 9
