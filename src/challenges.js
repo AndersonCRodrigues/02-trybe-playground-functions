@@ -14,8 +14,8 @@ function splitSentence(palavra) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  return `${vetor[vetor.length - 1]}, ${vetor[0]}`;
 }
 
 // Desafio 5
