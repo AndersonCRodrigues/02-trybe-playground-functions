@@ -5,12 +5,17 @@ function testaNumero(numeros) {
   } return true;
 }
 
+function procuraRepitido(vetor, pos, contador) {
+  for (let j = 0; j < vetor.length; j += 1) {
+    if (pos === vetor[j]) contador += 1;
+  }
+  return contador;
+}
+
 function testaRepitido(vetor) {
   let contador = 0;
   for (let i = 0; i < vetor.length; i += 1) {
-    for (let j = 0; j < vetor.length; j += 1) {
-      if (vetor[i] === vetor[j]) contador += 1;
-    }
+    contador = procuraRepitido(vetor, vetor[i], contador);
     if (contador > 2) return false;
     contador = 0;
   }
@@ -39,7 +44,8 @@ function generatePhoneNumber(vetor) {
   }
   return geraNumero(vetor);
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 7, 0, 7]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
