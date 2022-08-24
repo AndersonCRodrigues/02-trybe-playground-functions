@@ -66,12 +66,41 @@ function fizzBuzz(vetor) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let codigo = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
+function codifica(caracter) {
+  for (let key in codigo) {
+    if (caracter === codigo[key]) return key;
+  }
+  return caracter;
 }
-function decode() {
-  // seu código aqui
+
+function encode(frase) {
+  let novaFrase = '';
+  for (let i = 0; i < frase.length; i += 1) {
+    novaFrase += `${codifica(frase[i])}`;
+  }
+  return novaFrase;
 }
+
+//console.log(encode('hi there!'));
+
+function decodifica(caracter) {
+  for (let key in codigo) {
+    if (caracter === key) return codigo[key];
+  }
+  return caracter;
+}
+
+function decode(frase) {
+  let novaFrase = '';
+  for (let i = 0; i < frase.length; i += 1) {
+    novaFrase += `${decodifica(frase[i])}`;
+  }
+  return novaFrase;
+}
+
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
