@@ -37,8 +37,12 @@ function highestCount(vetor) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(rato, gato1, gato2) {
+  let dist1 = Math.abs(Math.abs(gato1) - Math.abs(rato));
+  let dist2 = Math.abs(Math.abs(gato2) - Math.abs(rato));
+  if (dist1 < dist2) return 'cat1';
+  if (dist1 > dist2) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
