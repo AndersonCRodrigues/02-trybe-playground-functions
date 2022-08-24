@@ -99,7 +99,7 @@ function decode(frase) {
 }
 
 // Desafio 10
-function item (vetor, nome) {
+function Item(vetor, nome) {
   this.tech = vetor;
   this.name = nome;
 }
@@ -109,15 +109,13 @@ function techList(vetor, nome) {
   let lista = [];
   if (vetor.length > 0) {
     for (let i = 0; i < vetor.length; i += 1) {
-      let obj = new item (vetor[i], nome);
+      let obj = new Item(vetor[i], nome);
       lista.push(obj);
     }
     return lista;
   }
   return 'Vazio!';
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Anderson'));
 
 module.exports = {
   calcArea,
