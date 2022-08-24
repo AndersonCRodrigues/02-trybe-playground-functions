@@ -24,16 +24,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function conta(vetor, k) {
+  let contador = 0;
+  for (let i = 0; i < vetor.length; i += 1) {
+    if (k === vetor[i]) contador += 1;
+  }
+  return contador;
+}
+
 function highestCount(vetor) {
   let auxiliar = vetor[0];
-  let contador = 0;
   for (let i = 0; i < vetor.length; i += 1) {
     if (auxiliar < vetor[i]) auxiliar = vetor[i];
   }
-  for (let i = 0; i < vetor.length; i += 1) {
-    if (auxiliar === vetor[i]) contador += 1;
-  }
-  return contador;
+  return conta(vetor, auxiliar);
 }
 
 // Desafio 7
