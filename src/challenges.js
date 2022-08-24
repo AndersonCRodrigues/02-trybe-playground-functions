@@ -83,8 +83,6 @@ function encode(frase) {
   return novaFrase;
 }
 
-//console.log(encode('hi there!'));
-
 function decodifica(caracter) {
   for (let key in codigo) {
     if (caracter === key) return codigo[key];
@@ -99,8 +97,6 @@ function decode(frase) {
   }
   return novaFrase;
 }
-
-console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
