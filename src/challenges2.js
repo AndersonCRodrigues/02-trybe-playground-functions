@@ -77,7 +77,7 @@ function extraiNumero(frase) {
   let nString = frase.match(expressao);
   let numeros = [];
   for (let i = 0; i < nString.length; i += 1) {
-    let num = parseInt(nString[i]);
+    let num = parseInt(nString[i], 10);
     numeros.push(num);
   }
   console.log(numeros);
@@ -107,8 +107,6 @@ function hydrate(frase) {
   }
   return imprime(total);
 }
-
-//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
