@@ -44,11 +44,31 @@ function generatePhoneNumber(vetor) {
   }
   return geraNumero(vetor);
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 7, 0, 7]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function valorAbsoluto(n) {
+  return Math.abs(n);
+}
+
+function testaSoma(a, b, c) {
+  if (valorAbsoluto(a) > valorAbsoluto(b) + valorAbsoluto(c)) return false;
+  if (valorAbsoluto(b) > valorAbsoluto(a) + valorAbsoluto(c)) return false;
+  if (valorAbsoluto(c) > valorAbsoluto(a) + valorAbsoluto(b)) return false;
+  return true;
+}
+
+function testaDiferenca(a, b, c) {
+  if (valorAbsoluto(a) < valorAbsoluto(b) - valorAbsoluto(c)) return false;
+  if (valorAbsoluto(b) < valorAbsoluto(a) - valorAbsoluto(c)) return false;
+  if (valorAbsoluto(c) < valorAbsoluto(a) - valorAbsoluto(b)) return false;
+  return true;
+}
+
+function triangleCheck(lA, lB, lC) {
+  let soma = testaSoma(lA, lB, lC);
+  let diferenca = testaDiferenca(lA, lB, lC);
+  if (soma && diferenca) return true;
+  return false;
 }
 
 // Desafio 13
