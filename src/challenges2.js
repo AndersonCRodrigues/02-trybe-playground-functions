@@ -72,9 +72,43 @@ function triangleCheck(lA, lB, lC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function extraiNumero(frase) {
+  let expressao = /\d+/g;
+  let nString = frase.match(expressao);
+  let numeros = [];
+  for (let i = 0; i < nString.length; i += 1) {
+    let num = parseInt(nString[i]);
+    numeros.push(num);
+  }
+  console.log(numeros);
+  return numeros;
 }
+
+function testaVetor(vetor) {
+  for (let i = 0; i < vetor.length; i += 1) {
+    if (vetor[i] < 0 || vetor[i] > 9) return false;
+  }
+  return true;
+}
+
+function imprime(n) {
+  let inicio = `${n} copo`;
+  if (n > 1) inicio += 's';
+  let frase = `${inicio} de água`;
+  return frase;
+}
+
+function hydrate(frase) {
+  let vetor = extraiNumero(frase);
+  let total = 0;
+  let teste = testaVetor(vetor);
+  if (teste) {
+    for (let i = 0; i < vetor.length; i += 1) total += vetor[i];
+  }
+  return imprime(total);
+}
+
+//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
